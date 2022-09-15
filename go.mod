@@ -56,6 +56,7 @@ require (
 	github.com/Masterminds/semver/v3 v3.1.1 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
+	github.com/go-swagger/go-swagger v0.30.2 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/google/uuid v1.1.2 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
