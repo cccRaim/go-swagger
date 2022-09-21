@@ -1144,6 +1144,10 @@ func parseJSONTag(field *ast.Field) (name string, ignore bool, isString bool, er
 		st := reflect.StructTag(tv)
 		jsonParts := tagOptions(strings.Split(st.Get("json"), ","))
 
+		if jsonParts == nil || jsonParts.Name() == "" {
+			jsonParts = tagOptions(strings.Split(st.Get("query"), ","))
+		}
+
 		if jsonParts.Contain("string") {
 			// Need to check if the field type is a scalar. Otherwise, the
 			// ",string" directive doesn't apply.
